@@ -4,7 +4,9 @@
 
 var assign = require('object-assign');
 
-hexo.config.index_generator = assign({}, hexo.config.index_generator);
+hexo.config.index_generator = assign({
+  generator: 'alpha'
+}, hexo.config.index_generator);
 
 hexo.extend.generator.register('index', require('./lib/generator'));
 hexo.extend.generator.register('ares', require('./lib/generator'));
